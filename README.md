@@ -51,4 +51,25 @@ new Vue({
   el: '#root',
   render: h => h(app)
 })
+
+
+// other vue component
+
+{
+  async mounted () {
+    const res = await this.$request.get(...)
+  }
+}
+```
+
+如果不挂在到 vue 上，也可以直接引用:
+
+```
+import api from 'api-creater'
+
+const apis = api.init({
+  // 配置同上...
+})
+
+apis.get(...)
 ```
