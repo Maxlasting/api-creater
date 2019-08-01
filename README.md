@@ -11,7 +11,7 @@ npm i -S api-creater
 ```
 import Vue from 'vue'
 import app from '@app'
-import api from 'api'
+import api from 'api-creater'
 import { message } from 'element-ui'
 
 Vue.config.productionTip = false

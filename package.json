@@ -1,7 +1,7 @@
 {
   "name": "api-creater",
   "author": "付强",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "api creater",
   "main": "dist/index.js",
   "scripts": {
