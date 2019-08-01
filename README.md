@@ -71,5 +71,13 @@ const apis = api.init({
   // 配置同上...
 })
 
-apis.get(...)
+await apis.get(...)
+```
+
+如果有一些特殊的方法，可以这样调用：
+
+```
+await apis.use('some methods')('/api/xxx', {
+  params: {}
+})
 ```

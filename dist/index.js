@@ -2,43 +2,21 @@
 
 var _interopRequireDefault = require("@babel/runtime-corejs3/helpers/interopRequireDefault");
 
-var _Object$defineProperty2 = require("@babel/runtime-corejs3/core-js-stable/object/define-property");
+var _Object$defineProperty = require("@babel/runtime-corejs3/core-js-stable/object/define-property");
 
-_Object$defineProperty2(exports, "__esModule", {
+_Object$defineProperty(exports, "__esModule", {
   value: true
 });
 
 exports["default"] = void 0;
 
-var _defineProperty2 = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/object/define-property"));
-
-var _defineProperties = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/object/define-properties"));
-
-var _getOwnPropertyDescriptors = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/object/get-own-property-descriptors"));
-
-var _forEach = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/instance/for-each"));
-
-var _getOwnPropertyDescriptor = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/object/get-own-property-descriptor"));
-
-var _filter = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/instance/filter"));
-
-var _getOwnPropertySymbols = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/object/get-own-property-symbols"));
-
-var _keys = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/object/keys"));
-
 var _regenerator = _interopRequireDefault(require("@babel/runtime-corejs3/regenerator"));
-
-var _defineProperty3 = _interopRequireDefault(require("@babel/runtime-corejs3/helpers/defineProperty"));
 
 var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime-corejs3/helpers/asyncToGenerator"));
 
 var _promise = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/promise"));
 
 var _axios = _interopRequireDefault(require("axios"));
-
-function ownKeys(object, enumerableOnly) { var keys = (0, _keys["default"])(object); if (_getOwnPropertySymbols["default"]) { var symbols = (0, _getOwnPropertySymbols["default"])(object); if (enumerableOnly) symbols = (0, _filter["default"])(symbols).call(symbols, function (sym) { return (0, _getOwnPropertyDescriptor["default"])(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { var _context5; (0, _forEach["default"])(_context5 = ownKeys(source, true)).call(_context5, function (key) { (0, _defineProperty3["default"])(target, key, source[key]); }); } else if (_getOwnPropertyDescriptors["default"]) { (0, _defineProperties["default"])(target, (0, _getOwnPropertyDescriptors["default"])(source)); } else { var _context6; (0, _forEach["default"])(_context6 = ownKeys(source)).call(_context6, function (key) { (0, _defineProperty2["default"])(target, key, (0, _getOwnPropertyDescriptor["default"])(source, key)); }); } } return target; }
 
 var apiCreater = function apiCreater(options) {
   var _options$baseOptions = options.baseOptions,
@@ -84,21 +62,15 @@ var apiCreater = function apiCreater(options) {
     get: function () {
       var _get = (0, _asyncToGenerator2["default"])(
       /*#__PURE__*/
-      _regenerator["default"].mark(function _callee(url) {
-        var params,
-            options,
-            _args = arguments;
+      _regenerator["default"].mark(function _callee() {
+        var _args = arguments;
         return _regenerator["default"].wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                params = _args.length > 1 && _args[1] !== undefined ? _args[1] : {};
-                options = _args.length > 2 && _args[2] !== undefined ? _args[2] : {};
-                return _context.abrupt("return", createRequest(request.get(url, _objectSpread({
-                  params: params
-                }, options))));
+                return _context.abrupt("return", createRequest(request.get.apply(request, _args)));
 
-              case 3:
+              case 1:
               case "end":
                 return _context.stop();
             }
@@ -106,30 +78,24 @@ var apiCreater = function apiCreater(options) {
         }, _callee);
       }));
 
-      function get(_x) {
+      function get() {
         return _get.apply(this, arguments);
       }
 
       return get;
     }(),
-    "delete": function () {
-      var _delete2 = (0, _asyncToGenerator2["default"])(
+    put: function () {
+      var _put = (0, _asyncToGenerator2["default"])(
       /*#__PURE__*/
-      _regenerator["default"].mark(function _callee2(url) {
-        var params,
-            options,
-            _args2 = arguments;
+      _regenerator["default"].mark(function _callee2() {
+        var _args2 = arguments;
         return _regenerator["default"].wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                params = _args2.length > 1 && _args2[1] !== undefined ? _args2[1] : {};
-                options = _args2.length > 2 && _args2[2] !== undefined ? _args2[2] : {};
-                return _context2.abrupt("return", createRequest(request["delete"](url, _objectSpread({
-                  params: params
-                }, options))));
+                return _context2.abrupt("return", createRequest(request.put.apply(request, _args2)));
 
-              case 3:
+              case 1:
               case "end":
                 return _context2.stop();
             }
@@ -137,28 +103,24 @@ var apiCreater = function apiCreater(options) {
         }, _callee2);
       }));
 
-      function _delete(_x2) {
-        return _delete2.apply(this, arguments);
+      function put() {
+        return _put.apply(this, arguments);
       }
 
-      return _delete;
+      return put;
     }(),
     post: function () {
       var _post = (0, _asyncToGenerator2["default"])(
       /*#__PURE__*/
-      _regenerator["default"].mark(function _callee3(url) {
-        var data,
-            options,
-            _args3 = arguments;
+      _regenerator["default"].mark(function _callee3() {
+        var _args3 = arguments;
         return _regenerator["default"].wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
-                data = _args3.length > 1 && _args3[1] !== undefined ? _args3[1] : {};
-                options = _args3.length > 2 && _args3[2] !== undefined ? _args3[2] : {};
-                return _context3.abrupt("return", createRequest(request.post(url, data, options)));
+                return _context3.abrupt("return", createRequest(request.post.apply(request, _args3)));
 
-              case 3:
+              case 1:
               case "end":
                 return _context3.stop();
             }
@@ -166,28 +128,24 @@ var apiCreater = function apiCreater(options) {
         }, _callee3);
       }));
 
-      function post(_x3) {
+      function post() {
         return _post.apply(this, arguments);
       }
 
       return post;
     }(),
-    put: function () {
-      var _put = (0, _asyncToGenerator2["default"])(
+    "delete": function () {
+      var _delete2 = (0, _asyncToGenerator2["default"])(
       /*#__PURE__*/
-      _regenerator["default"].mark(function _callee4(url) {
-        var data,
-            options,
-            _args4 = arguments;
+      _regenerator["default"].mark(function _callee4() {
+        var _args4 = arguments;
         return _regenerator["default"].wrap(function _callee4$(_context4) {
           while (1) {
             switch (_context4.prev = _context4.next) {
               case 0:
-                data = _args4.length > 1 && _args4[1] !== undefined ? _args4[1] : {};
-                options = _args4.length > 2 && _args4[2] !== undefined ? _args4[2] : {};
-                return _context4.abrupt("return", createRequest(request.put(url, data, options)));
+                return _context4.abrupt("return", createRequest(request["delete"].apply(request, _args4)));
 
-              case 3:
+              case 1:
               case "end":
                 return _context4.stop();
             }
@@ -195,12 +153,34 @@ var apiCreater = function apiCreater(options) {
         }, _callee4);
       }));
 
-      function put(_x4) {
-        return _put.apply(this, arguments);
+      function _delete() {
+        return _delete2.apply(this, arguments);
       }
 
-      return put;
-    }()
+      return _delete;
+    }(),
+    use: function use(methods) {
+      return (
+        /*#__PURE__*/
+        (0, _asyncToGenerator2["default"])(
+        /*#__PURE__*/
+        _regenerator["default"].mark(function _callee5() {
+          var _args5 = arguments;
+          return _regenerator["default"].wrap(function _callee5$(_context5) {
+            while (1) {
+              switch (_context5.prev = _context5.next) {
+                case 0:
+                  return _context5.abrupt("return", createRequest(request[methods].apply(request, _args5)));
+
+                case 1:
+                case "end":
+                  return _context5.stop();
+              }
+            }
+          }, _callee5);
+        }))
+      );
+    }
   };
 };
 

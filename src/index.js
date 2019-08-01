@@ -18,18 +18,11 @@ const apiCreater = (options) => {
     })
   })
   return {
-    get: async (url, params = {}, options = {}) => createRequest(
-      request.get(url, { params, ...options })
-    ),
-    delete: async (url, params = {}, options = {}) => createRequest(
-      request.delete(url, { params, ...options })
-    ),
-    post: async (url, data = {}, options = {}) => createRequest(
-      request.post(url, data, options)
-    ),
-    put: async (url, data = {}, options = {}) => createRequest(
-      request.put(url, data, options)
-    ),
+    get: async (...args) => createRequest(request.get(...args)),
+    put: async (...args) => createRequest(request.put(...args)),
+    post: async (...args) => createRequest(request.post(...args)),
+    delete: async (...args) => createRequest(request.delete(...args)),
+    use: (methods) => async (...args) => createRequest(request[methods](...args))
   }
 }
 
