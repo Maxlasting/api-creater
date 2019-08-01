@@ -1,0 +1,30 @@
+{
+  "name": "api-creater",
+  "author": "付强",
+  "version": "0.0.1",
+  "description": "api creater",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rimraf dist && babel src -d dist"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/Maxlasting/api-creater#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maxlasting/api-creater.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Maxlasting/api-creater/issues"
+  },
+  "dependencies": {
+    "@babel/runtime-corejs3": "^7.5.5",
+    "axios": "^0.19.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "rimraf": "^2.6.3"
+  }
+}
